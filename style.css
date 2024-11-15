@@ -17,9 +17,17 @@
 }
 
 .white {
-    background-color: lavender;
+    background-color: rgb(191, 148, 228);
 }
 
 .black {
     background-color: purple;
+}
+
+.blackPiece {
+    fill: black;
+}
+
+.whitePiece {
+    fill: lavender;
 }
