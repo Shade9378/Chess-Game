@@ -1,0 +1,18 @@
+#gameboard {
+    width: 320px;
+    height: 320px;
+    background-color: black;
+}
+
+.square {
+    height: 40px;
+    width: 40px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
