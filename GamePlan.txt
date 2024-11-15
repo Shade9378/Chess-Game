@@ -99,3 +99,7 @@
     - Grab and drag pieces animation
     - Interface showing which pieces have been captured
 
+What to do after create basic 2-players front-end game:
+- add basic ai
+- make it a multiplayer game
+- add ai
