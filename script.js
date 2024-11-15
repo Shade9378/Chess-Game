@@ -15,8 +15,21 @@ const START_PIECES = [
 ]
 
 function createBoard() {
-    START_PIECES.forEach((startPiece) => {
-        const SQUARE = document.createElement('div');
-        SQUARE.classList.add('square')
+    START_PIECES.forEach((startPiece, i) => {
+        let square = document.createElement('div');
+        square.classList.add('square');
+        square.innerHTML = startPiece;
+        square.setAttribute('square-id', i);
+
+        let row = Math.floor((63 - i) / 8) + 1;
+        if (row % 2 == 0) {
+            square.classList.add(i % 2 == 0 ? "white" : "black");
+        }
+        else {
+            square.classList.add(i % 2 == 0 ? "black" : "white");
+        }
+
+        GAME_BOARD.append(square);
     })
 }
+createBoard();

@@ -1,7 +1,8 @@
 #gameboard {
     width: 320px;
     height: 320px;
-    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .square {
@@ -9,10 +10,16 @@
     width: 40px;
 }
 
+.square svg {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
+
 .white {
-    background-color: white;
+    background-color: lavender;
 }
 
 .black {
-    background-color: black;
+    background-color: purple;
 }
