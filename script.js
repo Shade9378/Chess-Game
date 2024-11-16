@@ -2,6 +2,8 @@ const GAME_BOARD = document.querySelector("#gameboard");
 const PLAYER_DISPLAY = document.querySelector("#player");
 const INFO_DISPLAY = document.querySelector("#info-display");
 const WIDTH = 8;
+let playerGo = 'black';
+PLAYER_DISPLAY.textContent = 'black';
 
 const START_PIECES = [ ///Initialization need rework
     ROOK, KNIGHT, BISHOP, QUEEN, KING, BISHOP, KNIGHT, ROOK,
@@ -19,7 +21,7 @@ function createBoard() {
         let square = document.createElement('div');
         square.classList.add('square');
         square.innerHTML = startPiece;
-        
+        square.firstChild?.setAttribute('draggable', true);
         square.setAttribute('square-id', i);
 
         let row = Math.floor((63 - i) / 8) + 1;
@@ -43,3 +45,31 @@ function createBoard() {
 }
 
 createBoard();
+
+const ALL_SQUARES = document.querySelectorAll(".square")
+
+ALL_SQUARES.forEach(square => {
+    square.addEventListener('dragstart', dragStart);
+    square.addEventListener('dragover', dragOver);
+    square.addEventListener('drop', dragDrop);
+})
+
+let startPostionId;
+let draggedElement;
+
+function dragStart(e) {
+    startPostionId = e.target.parentNode.getAttribute('square-id');
+    draggedElement = e.target;
+}
+
+function dragOver(e) {
+    e.preventDefault();
+}
+
+function dragDrop(e) {
+    e.stopPropagation();
+    
+    e.target.append(draggedElement);
+}
+
+
