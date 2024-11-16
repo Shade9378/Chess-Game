@@ -1,51 +1,12 @@
+    ///State of the Project and what to do next:
+    - Numbers of Rows and Columns
+    - Missing Special Moves (En Passant, Long/Short Castle) and Illegal Moves (King can still cross opponent's piece legal move, other pieces can still moves when king is checked), Checkmate and Draw
+    - Need a funtion to show the available legal moves of a piece upon clicking
+    - Missing an interface showing which pieces have been captured
 
-    ///PIECES LOGICS/MOVE PATTERN
-    ** i: Number of moves you want to make 
-    *** Can make a separate method for diagnal move, vertical move, horizontal move, one method that contain all of these or different method for each class of the pieces
-
-    Bishop
-    Legal Move:  
-    Row: Cuurr row +/- 1 * i 
-    Column: Curr col +/- 1 *i
-
-    Pawn
-    Column: Curr col + 1
-
-    Rook 
-    Row = Curr row
-    Column = Curr col +/- 1 * i
-    or 
-    Row = Curr row +/- 1 * i
-    Column = Curr col
-
-    Queen
-    Row: Cuurr row +/- 1 * i 
-    Column: Curr col +/- 1 *i
-
-    Row = Curr row
-    Column = Curr col +/- 1 * i
-    or 
-    Row = Curr row +/- 1 * i
-    Column = Curr col
-    
-    King
-    Row: Cuurr row +/- 1
-    Column: Curr col +/- 1
-
-    Row = Curr row
-    Column = Curr col +/- 1
-    or 
-    Row = Curr row +/- 1
-    Column = Curr col
-
-    Knight
-    Row: Curr row +/- 1
-    Column: Curr column + 2 or Current column - 2
-    or 
-    Row: Curr row + 2 or Current row - 2
-    Column: Curr column +/- 1
-
-
+    - add basic ai
+    - make it a multiplayer game
+    - add ai
 
     ///LEGAL MOVES
     - King cannot cross opponent's piece legal move   
@@ -76,30 +37,12 @@
     - Num of row/column
     - Black/white spots
 
-    /// PROPERTIES OF PIECES
-    - Starting position
-    - Current position:
-        + Row
-        + Column
-        + Color of position
-    - Move pattern
-    - Legal moves (Method to check)
-    - Move/Capture (method) 
-        + Capture: If the piece's position is align with another piece legal move, it can be captured
-    - Point of each piece
-
     /// UI
+    - Board keep tracks of moves
     - A method to update the board after each moves
     - Feature to undo/return to the previous
     - Feature to reset the game
     - Feature to choose to play as black or white
     - Feature to allow player to initialize the chessboard to whatever position they want
     - Click on piece to show available moves
-    - Moving pieces animation
-    - Grab and drag pieces animation
     - Interface showing which pieces have been captured
-
-What to do after create basic 2-players front-end game:
-- add basic ai
-- make it a multiplayer game
-- add ai
