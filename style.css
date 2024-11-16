@@ -29,18 +29,18 @@ path {
     z-index: 9;
 }
 
-.white {
+.whiteSpot {
     background-color: rgb(191, 148, 228);
 }
 
-.black {
+.blackSpot {
     background-color: purple;
 }
 
-.blackPiece {
+.black {
     fill: black;
 }
 
-.whitePiece {
+.white {
     fill: lavender;
 }

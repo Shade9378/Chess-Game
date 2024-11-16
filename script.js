@@ -26,18 +26,18 @@ function createBoard() {
 
         let row = Math.floor((63 - i) / 8) + 1;
         if (row % 2 == 0) {
-            square.classList.add(i % 2 == 0 ? 'white' : 'black');
+            square.classList.add(i % 2 == 0 ? 'whiteSpot' : 'blackSpot');
         }
         else {
-            square.classList.add(i % 2 == 0 ? 'black' : 'white');
+            square.classList.add(i % 2 == 0 ? 'blackSpot' : 'whiteSpot');
         }
 
         if (i <= 15) { ///Logic need rework
-            square.firstChild.firstChild.classList.add('blackPiece');
+            square.firstChild.firstChild.classList.add('black');
         }  
 
         if (i >= 48) { ///Logic need rework
-            square.firstChild.firstChild.classList.add('whitePiece');
+            square.firstChild.firstChild.classList.add('white');
         }  
 
         GAME_BOARD.append(square);
@@ -54,11 +54,11 @@ ALL_SQUARES.forEach(square => {
     square.addEventListener('drop', dragDrop);
 })
 
-let startPostionId;
+let startPositionId;
 let draggedElement;
 
 function dragStart(e) {
-    startPostionId = e.target.parentNode.getAttribute('square-id');
+    startPositionId = e.target.parentNode.getAttribute('square-id');
     draggedElement = e.target;
 }
 
@@ -68,8 +68,57 @@ function dragOver(e) {
 
 function dragDrop(e) {
     e.stopPropagation();
-    
-    e.target.append(draggedElement);
+    let correctGo = draggedElement.firstChild.classList.contains(playerGo);
+    let taken = e.target.classList.contains('piece');
+    let opponentGo = playerGo == 'white' ? 'black' : 'white';
+    let takenByOpponent = e.target.firstChild?.classList.contains(opponentGo);
+
+    if (correctGo) {
+        if (takenByOpponent && valid) {
+            e.target.parentNode.append(draggedElement);
+            e.target.remove();
+            changePlayer();
+            return;
+        }
+
+        if (taken && !takenByOpponent) {
+            INFO_DISPLAY.textContent = "You can't go here";
+            setTimeout(() => INFO_DISPLAY.textContent = "", 2000);
+            return;
+        }
+
+        if (valid) {
+            e.target.append(draggedElement) 
+            changePlayer();
+            return;
+        }
+    }
 }
+
+function changePlayer() {
+    if (playerGo == 'black') {
+        reverseIds();
+        playerGo = 'white';
+        PLAYER_DISPLAY.textContent = 'white';
+    }
+    else {
+        revertIds();
+        playerGo = 'black';
+        PLAYER_DISPLAY.textContent = 'black';
+    }
+}
+
+function reverseIds() {
+    const ALL_SQUARES = document.querySelectorAll('.square');
+    ALL_SQUARES.forEach((square, i) => 
+        square.setAttribute('square-id', (WIDTH * WIDTH - 1) - i));
+}
+
+function revertIds() {
+    const ALL_SQUARES = document.querySelectorAll('.square');
+    ALL_SQUARES.forEach((square, i) => 
+        square.setAttribute('square-id', i));
+}
+
 
 
