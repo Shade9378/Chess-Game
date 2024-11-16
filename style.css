@@ -1,19 +1,24 @@
-#gameboard {
-    width: 320px;
-    height: 320px;
+body {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
+#gameboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .square {
-    height: 40px;
-    width: 40px;
     position: relative;
+    aspect-ratio: 1;
+    padding: 10px;
 }
 
 .square svg {
-    height: 30px;
-    width: 30px;
+    height: 70px;
+    width: 70px;
     margin: 5px;
     position: relative;
     z-index: -9;
