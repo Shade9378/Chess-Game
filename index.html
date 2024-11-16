@@ -5,12 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Chess</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/f118d5275d.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="gameboard"></div>
-        <p>It is <span id="player"></span> turn. </p>
+        <div id="sidebar">
+            <p class="items" id="title">Chess Game</p>
+            <a href="#" class="items"><i class="fa-solid fa-gamepad" style="margin-right: 20px;"></i> Game Modes</a>
+            <a href="#" class="items"><i class="fa-solid fa-puzzle-piece" style="margin-right: 25px;"></i> Puzzles</a>
+            <a href="#" class="items"><i class="fa-solid fa-chalkboard-user" style="margin-right: 22px;"></i> Learn</a> 
+        </div>
+
+        <div id="button-container">
+            <button class="fa-solid fa-bars" id="button"
+            onclick="openAndCloseSideBar()">&#9776;</button>
+        </div>
+
+        <div id="game-section">
+            <div id="gameboard"></div>
+            <p>It is <span id="player"></span>'s turn. </p>
         <p id="info-display"> </p>
-        
+
+        </div>
         <script src="pieces.js"></script>
         <script src="script.js"></script>
     </body>

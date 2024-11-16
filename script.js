@@ -324,5 +324,18 @@ function checkForWin() {
     }
 }
 
+function openAndCloseSideBar() {
+    let sidebar = document.getElementById("sidebar");
+    let button = document.getElementById("button")
+
+    if (sidebar.style.width === "350px") {
+        sidebar.style.width = "0";  
+
+    } else {
+        sidebar.style.width = "350px"; 
+
+    }
+}
+
 
 
