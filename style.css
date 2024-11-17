@@ -1,18 +1,17 @@
 body {
     height: 100vh;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     background-color: hsl(249, 26%, 20%);
     margin: 0%;
-
 }
 
 #game-section {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin: 1%;
     align-items: center;
     flex-wrap: wrap;
@@ -40,8 +39,8 @@ body {
 
 @media screen and (max-width: 1033px) { /*** PUT AN ERROR IF USED ON SMARTPHONES ***/
     .square svg {
-        height: 30px;
-        width: 30px;
+        height: 50px;
+        width: 50px;
     }
 }
 
@@ -71,10 +70,10 @@ path {
     fill: lavender;
 }
 
-p, a {
+p, a, .mode-info, .history-title {
     font-family: "Overpass", sans-serif;
-    font-size: 30px;
-    color: white;
+    font-size: 150%;
+    color: aliceblue;
 }
 
 a {
@@ -84,7 +83,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, .tools:hover {
     color: rgb(169, 146, 204);
 }
 
@@ -122,16 +121,75 @@ a:hover {
     height: 100%;
 }
 
-.fa-solid .fa-gamepad {
-    margin-right: 20px
+.info {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column ;
+    align-items: center;
+    background-color: hsl(249, 29%, 18%);
+    height: 80%;
+    width: 500px;
+    margin: 60px;
+}
+.messages {
+    height: 250px;
 }
 
-.fa-solid .fa-puzzle-piece {
-    margin-right: 25px
+.history {
+    
 }
 
-.fa-chalkboard-user {
-    margin-right: 22px
+.mode-info, 
+.history-title {
+    
+    width: 100%;
 }
 
+.mode-info{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(249, 32%, 16%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bolder;
 
+}
+
+.history-title {
+    display: flex;
+    align-items: center;
+    text-indent: 10px;
+    font-size: 15px;
+    font-weight: lighter;
+    height: 39px;
+    border-top: 1px solid rgb(46, 46, 78);
+    border-bottom: 1px solid rgb(46, 46, 78);
+    
+}
+
+.history {
+    width: 100%;
+    height: 70%;
+}
+
+.tools-container {
+    background-color: hsl(249, 32%, 16%);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.tools {
+    background-color: hsl(249, 29%, 18%);
+    color: aliceblue;
+    width: 20%;
+    height: 60%;
+    margin: 3%;
+    border: 0;
+}

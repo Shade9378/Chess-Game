@@ -1,3 +1,7 @@
+window.onbeforeunload = function() {
+    return "Data will be lost if you leave the page, are you sure?";
+  };
+
 const GAME_BOARD = document.querySelector("#gameboard");
 const PLAYER_DISPLAY = document.querySelector("#player");
 const INFO_DISPLAY = document.querySelector("#info-display");

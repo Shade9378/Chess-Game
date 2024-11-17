@@ -4,6 +4,7 @@
     - Missing Special Moves (En Passant, Long/Short Castle, Promote) and Illegal Moves (King can still cross opponent's piece legal move, other pieces can still moves when king is checked), Checkmate and Draw
     - Need a funtion to show the available legal moves of a piece upon clicking
     - Missing an interface showing which pieces have been captured
+    - Pop up menu showing the progress will not be save if reload the page
 
     !!!Bug: - pawns can take the piece that is in front of them
             - piece can go through each other

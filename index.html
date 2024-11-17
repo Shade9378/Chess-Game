@@ -8,28 +8,42 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/f118d5275d.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="sidebar">
             <p class="items" id="title">Chess Game</p>
             <a href="#" class="items"><i class="fa-solid fa-gamepad" style="margin-right: 20px;"></i> Game Modes</a>
-            <a href="#" class="items"><i class="fa-solid fa-puzzle-piece" style="margin-right: 25px;"></i> Puzzles</a>
-            <a href="#" class="items"><i class="fa-solid fa-chalkboard-user" style="margin-right: 22px;"></i> Learn</a> 
+            <a href="#" onclick="alert('Comming soon!')" class="items"><i class="fa-solid fa-puzzle-piece" style="margin-right: 25px;"></i> Puzzles</a>
+            <a href="#" onclick="alert('Comming soon!')" class="items"><i class="fa-solid fa-chalkboard-user" style="margin-right: 22px;"></i> Learn</a> 
         </div>
 
         <div id="button-container">
-            <button class="fa-solid fa-bars" id="button"
+            <button class="fa-solid" id="button"
             onclick="openAndCloseSideBar()">&#9776;</button>
         </div>
 
         <div id="game-section">
             <div id="gameboard"></div>
-            <p>It is <span id="player"></span>'s turn. </p>
-        <p id="info-display"> </p>
+            <div class="info">
+                <div class="mode-info"><i class="fa-solid fa-people-arrows" style="margin-right: 20px;"></i>1 vs 1 Offline</div>
+                <div class="messages">
+                    <p>It is <span id="player"></span>'s turn. </p>
+                    <p id="info-display"></p>
+                </div>
+                <div class="history-title">Moves list</div>
+                <div class="history"></div>
+
+                <div class="tools-container">
+                    <button class="tools"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="tools"><i class="fa-solid fa-chevron-right"></i></button>
+                    <button class="tools"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                    <button class="tools"><i class="fa-regular fa-flag"></i></button>
+                </div>
+            </div>
 
         </div>
         <script src="pieces.js"></script>
         <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/f118d5275d.js" crossorigin="anonymous"></script>
     </body>
 </html>
