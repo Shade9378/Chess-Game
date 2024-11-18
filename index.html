@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
     </head>
     <body>
         <div id="sidebar">
@@ -30,6 +31,11 @@
                 <div class="messages">
                     <p>It is <span id="player"></span>'s turn. </p>
                     <p id="info-display"></p>
+                    <ul>
+                        
+                    </ul>
+                    <input placeholder="message">
+                    <button class="send-message">Send</button>
                 </div>
                 <div class="history-title">Moves list</div>
                 <div class="history"></div>
@@ -44,6 +50,7 @@
 
         </div>
         <script src="pieces.js"></script>
+        <script src="app.js"></script>
         <script src="script.js"></script>
         <script src="https://kit.fontawesome.com/f118d5275d.js" crossorigin="anonymous"></script>
     </body>
