@@ -9,7 +9,7 @@ socket.on('message', text => {
 document.querySelector('.send-message').onclick = () => {
 
     const text = document.querySelector('input').value;
-    socket.emit('message', text);
+    socket.emit('message', text)
 }
 
 const GAME_BOARD = document.querySelector("#gameboard");
@@ -125,9 +125,9 @@ function checkIfValid(target) {
             let starterRow = [48,49,50,51,52,53,54,55];
             if (
                 starterRow.includes(startId) && startId - WIDTH * 2 == targetId ||
-                startId + WIDTH == targetId || 
-                startId + WIDTH - 1 == targetId && document.querySelector(`[square-id="${startId + WIDTH - 1}"]`).firstChild ||
-                startId + WIDTH + 1 == targetId && document.querySelector(`[square-id="${startId + WIDTH + 1}"]`).firstChild
+                startId - WIDTH == targetId || 
+                startId - WIDTH - 1 == targetId && document.querySelector(`[square-id="${startId + WIDTH - 1}"]`).firstChild ||
+                startId - WIDTH + 1 == targetId && document.querySelector(`[square-id="${startId + WIDTH + 1}"]`).firstChild
                 ) {
                 return true;
             }
