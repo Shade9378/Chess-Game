@@ -18,7 +18,7 @@ const INFO_DISPLAY = document.querySelector("#info-display");
 const WIDTH = 8;
 let playerGo = 'white';
 let gameMode = 'offline 1v1';
-PLAYER_DISPLAY.textContent = playerGo;
+PLAYER_DISPLAY.textContent = 'white';
 
 const START_PIECES = [ ///Initialization need rework
     ROOK, KNIGHT, BISHOP, QUEEN, KING, BISHOP, KNIGHT, ROOK,
@@ -348,11 +348,8 @@ function checkForWin() {
 }
 
 function resetGame() {
-    while(GAME_BOARD.firstChild) { 
-        GAME_BOARD.removeChild(GAME_BOARD.firstChild);
-    } 
-    createBoard();
-    playerGo = 'white';
+    window.onbeforeunload = function() {};
+    window.location.reload();
 }
 
 function changeGameMode(mode) {
