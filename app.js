@@ -9,8 +9,7 @@ socket.on('message', text => {
 document.querySelector('.send-message').onclick = () => {
 
     const text = document.querySelector('input').value;
-    socket.emit('message', text)
-    
+    socket.emit('message', text);
 }
 
 const GAME_BOARD = document.querySelector("#gameboard");
