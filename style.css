@@ -18,6 +18,7 @@ body {
 }
 
 #gameboard {
+    width: 50%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
@@ -26,22 +27,20 @@ body {
 .square {
     position: relative;
     aspect-ratio: 1;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .square svg {
-    height: 60px;
-    width: 60px;
-    margin: 5px;
+    width: 80%;
+    height: 80%;
+    aspect-ratio: 1;
+    margin: 9%;
     position: relative;
     z-index: -9;
-}
-
-@media screen and (max-width: 1033px) { /*** PUT AN ERROR IF USED ON SMARTPHONES ***/
-    .square svg {
-        height: 50px;
-        width: 50px;
-    }
+    flex-shrink: 0
 }
 
 path {
