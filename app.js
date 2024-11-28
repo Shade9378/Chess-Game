@@ -126,8 +126,8 @@ function checkIfValid(target) {
             if (
                 starterRow.includes(startId) && startId - WIDTH * 2 == targetId ||
                 startId - WIDTH == targetId || 
-                startId - WIDTH - 1 == targetId && document.querySelector(`[square-id="${startId + WIDTH - 1}"]`).firstChild ||
-                startId - WIDTH + 1 == targetId && document.querySelector(`[square-id="${startId + WIDTH + 1}"]`).firstChild
+                startId - WIDTH - 1 == targetId && document.querySelector(`[square-id="${startId - WIDTH - 1}"]`).firstChild ||
+                startId - WIDTH + 1 == targetId && document.querySelector(`[square-id="${startId - WIDTH + 1}"]`).firstChild
                 ) {
                 return true;
             }
