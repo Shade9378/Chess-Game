@@ -17,11 +17,9 @@
 
     ///LEGAL MOVES
     - King cannot cross opponent's piece legal move   
-    - IF A PIECE IS BLOCK, IT CAN NOT MOVE THROUGH THE BLOCKAGE
     
    ///PROPERTIES OF THE GAME
     May need sth to keep track of all the pieces available on the board (Maybe a matrix)
-    - White move first
     - Number of material won/lost
     - Evaluation of the position (based on what?)
     - The king is checked when his current position aligns with the legal move of another piece
@@ -39,17 +37,10 @@
         + The king is not in check 
         + The king does not move through or end on a square attacked by an enemy piece: 
 
-    Properties of chess board
-    Need sth to to  convert (a,b,c) to (1,2,3), maybe a dictionary
-    - Num of row/column
-    - Black/white spots
-
     /// UI
     - Board keep tracks of moves
     - A method to update the board after each moves
     - Feature to undo/return to the previous
-    - Feature to reset the game
     - Feature to choose to play as black or white
     - Feature to allow player to initialize the chessboard to whatever position they want
-    - Click on piece to show available moves
     - Interface showing which pieces have been captured
