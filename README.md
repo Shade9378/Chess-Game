@@ -16,7 +16,7 @@ Navigate to the project directory:
 - Navigate to the download folder 
 - Run `index.html`
 
-## To run the local server (for online communication)
+## To run the local server (for online functionalities)
 - Navigate to the download folder
 - Enter `server` folder
 - Run:
