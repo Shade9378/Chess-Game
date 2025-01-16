@@ -8,7 +8,7 @@ The Web-based Chess Game is a simple offline 1v1 chess application built on vani
 - `Node.js`: Backend server for WebSocket management.
 
 ## Installation
-- Clone or download the repository: `git@github.com:Shade9378/Chess-Game.git`
+- Clone or download the repository:
 ```bash
 git clone https://github.com/yourusername/web-chess-game.git
 Navigate to the project directory:
