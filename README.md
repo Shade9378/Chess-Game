@@ -4,7 +4,7 @@ The Web-based Chess Game is a simple offline 1v1 chess application built on vani
 # Technologies Used
 - `HTML/CSS`: Markup and styling for the game interface.
 - `JavaScript`: Game logic, UI interactions.
-- `WebSocket`: For multiplayer game functionality.
+- `WebSocket`: For online functionalities.
 - `Node.js`: Backend server for WebSocket management.
 
 ## Installation
